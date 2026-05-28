@@ -1,6 +1,6 @@
 # AI Proxy Server & Extension
 
-这是一个旨在为旧系统（Legacy Web Systems）提供 AI 增强能力的工具集，由 **Hyperion** 构建。
+这是一个旨在为旧系统（Legacy .NET Systems）提供 AI 增强能力的工具集，由 **Hyperion** 构建。
 
 ## 项目组件
 
@@ -8,7 +8,7 @@
 一个轻量级代理服务器，充当 AI（Gemini CLI）和前端应用之间的桥梁。
 
 - **核心功能**:
-  - 提供 `/api/parse` 接口：接收图像或 PDF 字节流以及自然语言指令。
+  - 提供 `/api/parse-invoice` 接口：接收图像或 PDF 字节流以及自然语言指令。
   - 调用 `gemini` CLI 进行多模态解析。
   - 返回结构化的 JSON 数据，以便前端自动填充表单。
   - 提供 `/api/health` 监控接口。
@@ -19,9 +19,9 @@
 
 - **核心功能**:
   - **Side Panel**: 提供文件上传（发票、报表截图）和指令输入界面。
-  - **Content Script**: 针对 ASP.NET WebForms 优化的 DOM 填充逻辑。
-    - 支持通过 ID 后缀定位嵌套控件。
-    - 支持 GridView 明细行模式匹配与填充。
+  - **Content Script**: 针对 ASP.NET Core Razor Pages 优化的 DOM 填充逻辑。
+    - 支持通过元素 ID 或 name 定位表单字段。
+    - 支持表格明细行（`data-field` 属性）的数据填充。
     - 提供填充后的视觉闪烁反馈。
   - **Background Service**: 维护与代理服务器的通信。
 

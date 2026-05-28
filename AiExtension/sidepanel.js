@@ -26,10 +26,11 @@ sendBtn.addEventListener('click', async () => {
 
   const formData = new FormData();
   if (file) formData.append('file', file);
-  formData.append('prompt', prompt);
+  formData.append('instruction', prompt);
+  formData.append('schemaType', 'uriage');
 
   try {
-    const response = await fetch('http://localhost:5001/api/parse', {
+    const response = await fetch('http://localhost:5001/api/parse-invoice', {
       method: 'POST',
       body: formData
     });

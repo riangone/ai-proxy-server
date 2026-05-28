@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Gemini Legacy Wrapper",
   "version": "1.0",
-  "description": "Adds AI capabilities to legacy WebForms systems using Gemini.",
+  "description": "Adds AI capabilities to legacy .NET systems using Gemini.",
   "permissions": [
     "sidePanel",
     "storage",
